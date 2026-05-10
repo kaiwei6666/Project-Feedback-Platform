@@ -285,3 +285,114 @@ Feedback Giver 的主要流程如下：
 6. 專案更新後再次收集回饋
 
 這個循環是本平台最重要的產品價值。平台不是只讓開發者展示作品，而是幫助開發者持續驗證、改善與成長。
+
+## 8. Initial Data Model
+
+本平台 MVP 階段會先設計最基本的資料模型，確保可以支援「使用者註冊、專案發布、回饋提交、回饋查看」這幾個核心功能。
+
+### 8.1 users
+
+`users` 資料表用來儲存平台使用者資料。
+
+主要欄位包括：
+
+- id
+- name
+- email
+- password_hash
+- role
+- bio
+- avatar_url
+- created_at
+- updated_at
+
+其中 `role` 可以用來區分不同使用者身份，例如：
+
+- project_maker
+- feedback_giver
+- admin
+
+### 8.2 projects
+
+`projects` 資料表用來儲存 side project 的基本資訊。
+
+主要欄位包括：
+
+- id
+- user_id
+- title
+- short_description
+- full_description
+- category_id
+- stage
+- github_url
+- demo_url
+- cover_image_url
+- status
+- created_at
+- updated_at
+
+其中 `user_id` 代表這個專案是由哪一位 Project Maker 建立。
+
+### 8.3 feedbacks
+
+`feedbacks` 資料表用來儲存使用者對專案提交的回饋。
+
+主要欄位包括：
+
+- id
+- project_id
+- user_id
+- clarity_score
+- usefulness_score
+- willingness_to_use_score
+- most_valuable_feature
+- improvement_suggestion
+- difficulty
+- overall_rating
+- additional_comment
+- created_at
+- updated_at
+
+### 8.4 categories
+
+`categories` 資料表用來管理專案分類。
+
+主要欄位包括：
+
+- id
+- name
+- description
+- created_at
+- updated_at
+
+範例分類包括：
+
+- Web App
+- Mobile App
+- AI Tool
+- Developer Tool
+- Productivity
+- Education
+- Data Analysis
+- Open Source
+
+### 8.5 feedback_types
+
+`feedback_types` 資料表用來管理開發者想收集的回饋類型。
+
+主要欄位包括：
+
+- id
+- name
+- description
+- created_at
+- updated_at
+
+範例回饋類型包括：
+
+- UI/UX Feedback
+- Feature Suggestion
+- Bug Report
+- Product Positioning
+- Market Need Validation
