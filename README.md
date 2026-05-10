@@ -396,3 +396,62 @@ Feedback Giver 的主要流程如下：
 - Bug Report
 - Product Positioning
 - Market Need Validation
+
+## 9. Initial API Design
+
+本平台 MVP 階段會採用 RESTful API 架構，讓前端可以透過 API 與後端進行資料交換。初期 API 會圍繞四個核心資源設計：users、projects、feedbacks、categories。
+
+### 9.1 Auth APIs
+
+Auth APIs 負責處理使用者註冊、登入與身份驗證。
+
+| Method | Endpoint | Description |
+| --- | --- | --- |
+| POST | /api/auth/register | 註冊新使用者 |
+| POST | /api/auth/login | 使用者登入 |
+| GET | /api/auth/me | 取得目前登入使用者資料 |
+| POST | /api/auth/logout | 使用者登出 |
+
+### 9.2 Project APIs
+
+Project APIs 負責處理 side project 的建立、讀取、更新與刪除。
+
+| Method | Endpoint | Description |
+| --- | --- | --- |
+| GET | /api/projects | 取得公開專案列表 |
+| GET | /api/projects/:id | 取得單一專案詳細資料 |
+| POST | /api/projects | 建立新專案 |
+| PUT | /api/projects/:id | 更新專案資料 |
+| DELETE | /api/projects/:id | 刪除專案 |
+
+### 9.3 Feedback APIs
+
+Feedback APIs 負責處理使用者提交的結構化回饋。
+
+| Method | Endpoint | Description |
+| --- | --- | --- |
+| GET | /api/projects/:id/feedbacks | 取得某專案的所有回饋 |
+| POST | /api/projects/:id/feedbacks | 對某專案提交回饋 |
+| GET | /api/feedbacks/:id | 取得單一回饋詳細資料 |
+| DELETE | /api/feedbacks/:id | 刪除回饋 |
+
+### 9.4 Category APIs
+
+Category APIs 負責提供專案分類資料，讓使用者可以依照分類瀏覽專案。
+
+| Method | Endpoint | Description |
+| --- | --- | --- |
+| GET | /api/categories | 取得所有專案分類 |
+| POST | /api/categories | 建立新分類 |
+| PUT | /api/categories/:id | 更新分類 |
+| DELETE | /api/categories/:id | 刪除分類 |
+
+### 9.5 API Design Principles
+
+本專案 API 設計會遵守以下原則：
+
+- 使用清楚且一致的 endpoint 命名
+- 使用 HTTP methods 表達操作語意
+- 回傳統一格式的 JSON response
+- 將身份驗證與權限檢查放在後端處理
+- 將錯誤訊息標準化，方便前端顯示
