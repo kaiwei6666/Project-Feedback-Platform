@@ -176,3 +176,58 @@ MVP 階段的回饋表單可以包含以下欄位：
 - GitHub API 整合
 - Demo 使用行為分析
 - 團隊協作功能
+
+## 6. Tech Stack
+
+本專案會以全端 Web 平台的方式進行開發，並採用適合長期維護與功能擴充的技術架構。
+
+### 6.1 Frontend
+
+前端主要負責使用者介面與互動流程，包括專案列表、專案詳情頁、發布專案頁面、回饋表單與開發者後台。
+
+預計使用技術：
+
+- React
+- TypeScript
+- Tailwind CSS
+- React Router
+- Axios 或 Fetch API
+
+### 6.2 Backend
+
+後端主要負責 API、使用者驗證、專案資料管理、回饋資料管理與權限控制。
+
+預計使用技術：
+
+- Node.js
+- Express.js
+- TypeScript
+- RESTful API
+- JWT Authentication
+
+### 6.3 Database
+
+資料庫主要用來儲存使用者、專案、回饋、分類與未來的互動資料。
+
+預計使用技術：
+
+- PostgreSQL
+
+初期主要資料表可能包括：
+
+- users
+- projects
+- feedbacks
+- categories
+- feedback_types
+
+### 6.4 Deployment
+
+部署階段會先以簡單、穩定、容易管理為主，讓 MVP 可以盡快上線測試。
+
+可能使用的部署工具：
+
+- Vercel：前端部署
+- Render 或 Railway：後端部署
+- Supabase 或 Neon：PostgreSQL 資料庫
+- GitHub：版本控制與專案紀錄
