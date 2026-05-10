@@ -481,3 +481,51 @@ side-project-feedback-platform/
 └── database/
     ├── schema.sql
     └── seed.sql
+
+    ## 11. MVP Success Criteria
+
+本平台 MVP 階段的目標不是追求完整功能，而是驗證核心流程是否真的成立。因此，第一版會以「是否能完成有效回饋循環」作為主要成功標準。
+
+### 11.1 Functional Criteria
+
+MVP 完成時，至少需要達成以下功能標準：
+
+- 使用者可以註冊與登入
+- Project Maker 可以建立並發布 side project
+- Feedback Giver 可以瀏覽公開專案
+- Feedback Giver 可以查看專案詳情
+- Feedback Giver 可以提交結構化回饋
+- Project Maker 可以查看自己專案收到的回饋
+- 平台可以正常儲存使用者、專案與回饋資料
+
+### 11.2 Product Validation Criteria
+
+除了功能完成之外，本平台也需要驗證產品本身是否有價值。
+
+MVP 階段可以觀察以下指標：
+
+- 是否有開發者願意發布自己的 side project
+- 是否有使用者願意試用專案並留下回饋
+- 回饋內容是否足夠具體，能幫助開發者改善專案
+- 開發者是否認為平台比一般留言或 GitHub issue 更適合收集產品回饋
+- 使用者是否覺得回饋表單容易填寫
+
+### 11.3 Initial Metrics
+
+第一階段可以先設定以下初步目標：
+
+- 至少 5 個 side projects 被發布
+- 至少 20 筆結構化回饋被提交
+- 每個專案平均至少收到 3 筆回饋
+- 至少 3 位 Project Makers 願意根據回饋修改專案
+- 至少 5 位 Feedback Givers 願意再次使用平台
+
+### 11.4 Learning Goals
+
+MVP 階段最重要的不是數字本身，而是透過實際使用來回答以下問題：
+
+- 開發者是否真的需要這種回饋平台？
+- 使用者是否願意花時間提供結構化回饋？
+- 哪一種回饋欄位最有價值？
+- 哪些流程會造成使用者中途放棄？
+- 平台未來應該優先強化哪一個功能？
