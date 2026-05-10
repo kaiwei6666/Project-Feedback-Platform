@@ -455,3 +455,29 @@ Category APIs 負責提供專案分類資料，讓使用者可以依照分類瀏
 - 回傳統一格式的 JSON response
 - 將身份驗證與權限檢查放在後端處理
 - 將錯誤訊息標準化，方便前端顯示
+
+## 10. Project Structure
+
+本專案會採用前後端分離的結構，讓前端、後端與文件可以清楚分開，方便後續維護、擴充與部署。
+
+初步專案結構規劃如下：
+
+```text
+side-project-feedback-platform/
+├── README.md
+├── docs/
+│   ├── product-planning.md
+│   ├── user-flow.md
+│   ├── api-design.md
+│   └── database-design.md
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+├── backend/
+│   ├── src/
+│   ├── package.json
+│   └── .env.example
+└── database/
+    ├── schema.sql
+    └── seed.sql
