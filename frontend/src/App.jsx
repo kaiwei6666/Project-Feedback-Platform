@@ -1,8 +1,8 @@
 import './App.css'
-import HomePage from './pages/HomePage'
+import ProjectListPage from './pages/ProjectListPage'
 
 function App() {
-  return <HomePage />
+  return <ProjectListPage />
 }
 
 export default App
