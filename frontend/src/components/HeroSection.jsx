@@ -12,8 +12,12 @@ function HeroSection() {
       </p>
 
       <div className="hero-actions">
-        <button className="primary-button">Explore Projects</button>
-        <button className="secondary-button">Submit Your Project</button>
+        <a className="primary-button" href="/projects">
+          Explore Projects
+        </a>
+        <a className="secondary-button" href="#">
+          Submit Your Project
+        </a>
       </div>
     </header>
   )

@@ -4,6 +4,9 @@ import ProjectCard from '../components/ProjectCard'
 function ProjectListPage() {
   return (
     <main className="project-list-page">
+      <a className="back-link" href="/">
+        ← Back to Home
+      </a>
       <section className="page-header">
         <p className="badge">Explore Projects</p>
         <h1>Browse side projects that need feedback.</h1>

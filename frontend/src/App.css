@@ -54,13 +54,17 @@ body {
   flex-wrap: wrap;
 }
 
-button {
+button,
+.primary-button,
+.secondary-button {
   border: none;
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
   border-radius: 12px;
   padding: 14px 22px;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .primary-button {
@@ -243,4 +247,15 @@ button {
   .page-header h1 {
     font-size: 34px;
   }
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 32px;
+  color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
 }
