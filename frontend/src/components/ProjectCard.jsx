@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function ProjectCard({ project }) {
   return (
     <article className="project-card">
@@ -16,12 +18,9 @@ function ProjectCard({ project }) {
         ))}
       </div>
 
-      <div className="feedback-types">
-        <strong>Feedback wanted:</strong>
-        <span>{project.feedbackTypes.join(', ')}</span>
-      </div>
-
       <div className="project-links">
+        <Link to={`/projects/${project.id}`}>View Details</Link>
+
         <a href={project.githubUrl} target="_blank" rel="noreferrer">
           GitHub
         </a>
